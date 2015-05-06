@@ -1,0 +1,33 @@
+.wrapper {
+  @include outer-container;
+  overflow-y: hidden;
+  padding: 0 20px;
+}
+
+.printify--section {
+  padding: 60px 0;
+
+  .section--wrapper {
+    @extend .wrapper;
+  }
+
+  .section--heading {
+    margin: 0;
+  }
+
+  .section--subheading {
+    color: tint($headingColor, 30%);
+    font-family: $bodyFont;
+    font-size: $baseFontSize + 2px;
+    font-style: italic;
+    font-weight: $bodyBook;
+    margin: 0;
+    text-transform: none;
+  }
+
+  .section--row {
+    @extend .printify--row;
+    position: relative;
+  }
+
+}

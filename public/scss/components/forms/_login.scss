@@ -1,0 +1,17 @@
+.login-form--form {
+  @extend .printify--form;
+
+  .login-form--forgot-pass {
+    font-size: $baseFontSize - 3px;
+    font-style: italic;
+  }
+
+  .login-form--submit {
+    @extend .printify--btn;
+    @extend .printify--btn.btn--medium;
+    @extend .printify--btn.btn--primary;
+    display: block;
+    margin: 20px auto 0 auto;
+    width: 100%;
+  }
+}

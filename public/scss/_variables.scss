@@ -1,0 +1,52 @@
+// Colors
+$offBlack: #112732;
+$offWhite: #f9f9f9;
+$darkGray: #222222;
+$mediumGray: #666666;
+$gray: #999999;
+$mediumLightGray: #cccccc;
+$lightGray: #eeeeee;
+$white: #ffffff; 
+
+// Semantic Colors
+$primaryColor: #7ec9cb;
+$secondaryColor: shade(#EF8E7D, 0%);
+
+$highlightColor: tint($primaryColor, 30%);
+$shadowColor: shade($primaryColor, 70%);
+
+$linkColor: $primaryColor;
+$linkHoverColor: shade($linkColor, 20%);
+
+$backgroundColor: $offWhite;
+
+$errorColor: #E15E6E;
+$successColor: #51A689;
+$infoColor: #40526A;
+$alertColor: shade(#F1D768, 10%);
+
+// Z-indexes
+$zIndexTooltip: 50;
+$zIndexTopbar: 75;
+$zIndexModal: 100;
+$zIndexLoading: 1000;
+
+// Typography
+$baseFontSize: 15px;
+$headingFont: 'Gotham SSm A', 'Gotham SSm B', Helvetia, Arial, sans-serif;
+$bodyFont: 'Mercury SSm A', 'Mercury SSm B', Georgia, serif;
+
+$headingBold: 400;
+$headingBook: 300;
+$bodyBold: 400;
+$bodyBook: 300;
+
+$headingColor: $shadowColor;
+$bodyTextColor: #444444;
+
+// Grid
+$gridWidth: 960px;
+$minWidth: $gridWidth + 40px;
+
+// Misc
+$topbarHeight: 60px;

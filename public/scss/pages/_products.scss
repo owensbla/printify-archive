@@ -1,0 +1,25 @@
+.products--content {
+
+  .products--hero {
+    @extend .printify--small-hero;
+    // background: url('../images/products-hero.jpg') no-repeat;
+    // background-size: cover;
+
+    .hero--products {
+      @include clearfix();
+      display: inline-block;
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+
+      .hero--product {
+        float: left;
+
+        &:not(:last-child) {
+          margin-right: 40px;
+        }
+      }
+    }
+  }
+  
+}

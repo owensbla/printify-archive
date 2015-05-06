@@ -1,0 +1,33 @@
+@include keyframes(spin) {
+  from {
+    @include transform(rotate(0deg));
+  }
+  to {
+    @include transform(rotate(360deg));
+  }
+}
+
+.has-spinner {
+  color: transparent !important;
+  position: relative;
+
+  &:before {
+    @include animation(spin 1.0s linear);
+    @include animation-iteration-count(infinite);
+    @include icon('spinner');
+    color: $offWhite;
+    display: block;
+    left: 0;
+    font-size: 24px;
+    margin-top: -12px;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+  }
+}
+
+.icon-spinner:before {
+  @include icon('spinner');
+  @include animation(spin 1.0s linear);
+  @include animation-iteration-count(infinite);
+}

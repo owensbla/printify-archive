@@ -1,0 +1,33 @@
+.admin__marketplace--content {
+
+  .admin__marketplace--hero {
+    @extend .printify--small-hero;
+  }
+
+  .admin__marketplace--body {
+    @extend .wrapper;
+    padding: 60px 0;
+    max-width: 400px;
+  }
+
+  .admin__mp-form--form {
+    @extend .printify--form;
+  }
+
+    .admin__mp-form--submit {
+      @extend .printify--btn;
+      @extend .printify--btn.btn--primary;
+      @extend .printify--btn.btn--big;
+      margin-top: 40px;
+      width: 100%;
+    }
+
+    .admin__mp-form--add-variation {
+      @extend .printify--btn;
+      @extend .printify--btn.btn--primary--outline;
+      @extend .printify--btn.btn--small;
+      margin-top: 20px;
+      width: 100%;
+    }
+  
+}

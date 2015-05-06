@@ -1,0 +1,10 @@
+.home--content {
+    @extend .wrapper;
+    padding: 40px 0;
+
+    .home--links {
+        & > a {
+            margin-right: 20px;
+        }
+    }
+}

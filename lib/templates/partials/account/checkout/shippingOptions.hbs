@@ -1,0 +1,12 @@
+<ul class="shipping--methods">
+    {{#each shippingMethods}}
+    <li class="js-shipping-method shipping--method{{#if @first}} is-selected{{/if}}" data-id="{{id}}">
+        <span class="method--price">${{rate}}</span>
+        {{name}}
+    </li>
+    {{/each}}
+</ul>
+<p class="shipping--note">
+    * Over 95% of orders are fulfilled and shipped within 3-5 business days.
+</p>
+<button class="js-go-billing checkout--primary-action">Continue</button>

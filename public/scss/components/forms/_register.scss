@@ -1,0 +1,26 @@
+.register-form--form {
+  @extend .printify--form;
+
+  .register-form--forgot-pass {
+    font-size: $baseFontSize - 3px;
+    font-style: italic;
+  }
+
+  .register-form--submit {
+    @extend .printify--btn;
+    @extend .printify--btn.btn--medium;
+    @extend .printify--btn.btn--secondary;
+    display: block;
+    margin: 20px auto 0 auto;
+    width: 100%;
+  }
+
+  .register-form--agreement {
+    color: $mediumGray;
+    font-family: $headingFont;
+    font-size: $baseFontSize - 3px;
+    font-style: italic;
+    margin: 10px 0 0 0;
+    text-align: center;
+  }
+}

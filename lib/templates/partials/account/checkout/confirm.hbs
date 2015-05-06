@@ -1,0 +1,36 @@
+<div class="printify--message message--info">Confirm your order below, checkout, and we'll get to it!</div>
+<div class="overview--row checkout--section">
+    <div class="overview--column one-half">
+        <h1 class="section--heading">Billing Details</h1>
+        <div class="order--address">
+            <p class="address--field">{{ billingAddress.fullName }}</p>
+            <p class="address--field">{{ billingAddress.address1 }} {{ billingAddress.address2 }}</p>
+            <p class="address--field">{{ billingAddress.city }}, {{ billingAddress.state }} {{ billingAddress.zipCode }} {{ billingAddress.country }}</p>
+        </div>
+        <div class="order--cc">
+            <p class="cc--field">{{ creditCard.cardType }} ending in {{ creditCard.last4 }}</p>
+            <p class="cc--field">Expires {{ creditCard.expirationDate }}</p>
+        </div>
+    </div>
+    <div class="overview--column one-half">
+        <h1 class="section--heading">Shipping Address</h1>
+        <div class="order--address">
+            <p class="address--field">{{ shippingAddress.fullName }}</p>
+            <p class="address--field">{{ shippingAddress.address1 }} {{ shippingAddress.address2 }}</p>
+            <p class="address--field">{{ shippingAddress.city }}, {{ shippingAddress.state }} {{ shippingAddress.zipCode }} {{ shippingAddress.country }}</p>
+        </div>
+    </div>
+</div>
+<div class="checkout--section">
+    <h1 class="section--heading">Prints</h1>
+    <ul class="checkout--prints">
+        {{~#each cartItems ~}}
+        <li class="checkout--print">
+            <h5 class="print--name">{{ product.size }} {{ product.formattedModel }}</h5>
+            <img src="{{ photo.fullThumbnailUrl }}" alt="{{ product.formattedModel }} Upload Thumbnail" class="print--thumb">
+            <p class="print--price">{{ product.formattedPrice }}</p>
+        </li>
+        {{~/each~}}
+    </ul>
+</div>
+<button class="js-checkout checkout--primary-action">Checkout</button>

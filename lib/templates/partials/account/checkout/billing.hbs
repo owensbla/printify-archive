@@ -1,0 +1,26 @@
+<div class="checkout--section">
+    <h1 class="section--heading">Payment Details <span class="icon-lock"></span></h1>
+    <div class="js-cc-form">
+        {{> forms/creditCardForm }}
+    </div>
+</div>
+<div class="checkout--section">
+    <h1 class="section--heading">Billing Address</h1>
+    {{#if billingAddresses}}
+    <form class="shipping--addresses">
+        <label class="field--label">Saved Addresses</label>
+        <div class="field--select">
+            <select class="select--select js-saved-addresses" data-address-type="shipping">
+                {{#each billingAddresses}}
+                <option value="{{id}}">{{formattedAddress}}</option>
+                {{/each}}
+                <option value="new">New Address</option>
+            </select>
+        </div>
+    </form>
+    {{/if}}
+    <div class="js-form">
+        {{> forms/addressForm }}
+    </div>
+</div>
+<button class="js-submit-billing checkout--primary-action">Continue</button>

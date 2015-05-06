@@ -1,0 +1,23 @@
+.register-modal {
+  @include modal(350px);
+
+  .register-modal--heading {
+    color: $secondaryColor;
+    font-size: $baseFontSize + 8px;
+    margin: 0;
+    text-align: center;
+  }
+
+  .register-modal--form {
+    margin-top: 20px;
+    width: 100%;
+  }
+
+  .register-modal--note {
+    color: $mediumLightGray;
+    font-size: $baseFontSize - 3px;
+    font-style: italic;
+    margin: 0;
+    text-align: center;
+  }
+}

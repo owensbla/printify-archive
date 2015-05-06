@@ -1,0 +1,55 @@
+<div class="order-detail--content">
+    <section class="order-detail--hero">
+        <h1 class="hero--heading">Order: {{order.id}}</h1>
+        <h2 class="hero--subheading">
+            <span class="hero--order-detail">Status: {{order.formattedStatus}}</span>
+            <span class="hero--order-detail">Order Date: {{order.formattedCreatedAt}}</span>
+            <span class="hero--order-detail">Total: {{order.formattedTotal}}</span>
+        </h2>
+    </section>
+
+    <section class="order-detail--overview">
+        <div class="order-detail--section">
+            <ul class="order-detail--prints">
+                {{~#each order.orderItems ~}}
+                <li class="order-detail--print">
+                    <h5 class="print--name">{{size}} {{formattedModel}}</h5>
+                    <img src="{{photo.fullThumbnailUrl}}" alt="{{formattedModel}} Upload Thumbnail" class="print--thumb">
+                    {{!-- <p class="print--price">{{formattedPrice}}</p> --}}
+                    <p class="print--shipping-status">
+                        {{~#if shipment ~}}Shipped on {{shipment.formattedShipDate}} (<a href="{{shipment.trackingUrl}}" target="_blank">{{shipment.trackingNumber}}</a>)
+                        {{~^~}}
+                        Shipping Status: Processing
+                        {{~/if~}}
+                    </p>
+                </li>
+                {{~/each~}}
+            </ul>
+        </div>
+        <div class="overview--row order-detail--section">
+            <div class="overview--column one-half">
+                <h2 class="section--heading">Billing Details</h2>
+                <div class="order--address">
+                    <p class="address--field">{{order.billingFirstName}} {{order.billingLastName}}</p>
+                    <p class="address--field">{{order.billingAddress1}} {{order.billingAddress2 }}</p>
+                    <p class="address--field">{{order.billingCity}}, {{order.billingState }} {{order.billingZipCode}} {{order.billingCountry }}</p>
+                </div>
+                <div class="order--cc">
+                    <p class="cc--field">
+                        Paid with {{ order.paymentCardType }} ending in {{ order.paymentLast4 }}<br>
+                        Expires {{ order.paymentExpirationDate }}
+                    </p>
+                </div>
+            </div>
+            <div class="overview--column one-half">
+                <h2 class="section--heading">Shipping Address</h2>
+                <div class="order--address">
+                    <p class="address--field">{{order.shippingFirstName}} {{order.shippingLastName}}</p>
+                    <p class="address--field">{{order.shippingAddress1}} {{order.shippingAddress2 }}</p>
+                    <p class="address--field">{{order.shippingCity}}, {{order.shippingState }} {{order.shippingZipCode}} {{order.shippingCountry }}</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</div>

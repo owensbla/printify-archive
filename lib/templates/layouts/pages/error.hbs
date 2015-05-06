@@ -1,0 +1,23 @@
+{{~#if is404 ~}}
+<div class="error--content">
+    <div class="error--hero">
+        <h1 class="hero--heading">404</h1>
+    </div>
+
+    <div class="error--overview">
+        <p>It looks like something went wrong. If this problem persists, please contact us at <a href="mailto:support@printify.io">support@printify.io</a>.</p>
+    </div>
+</div>
+{{~/if~}}
+
+{{~#if is500 ~}}
+<div class="error--content">
+    <div class="error--hero">
+        <h1 class="hero--heading">Uh oh!</h1>
+    </div>
+
+    <div class="error--overview">
+        <p>It looks like something went wrong. If this problem persists, please contact us at <a href="mailto:support@printify.io">support@printify.io</a>.</p>
+    </div>
+</div>
+{{~/if~}}

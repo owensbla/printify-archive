@@ -1,0 +1,49 @@
+.printify--totals {
+
+  .printify--total {
+    font-family: $headingFont;
+    font-size: $baseFontSize - 4px;
+    font-weight: $headingBook;
+    text-transform: uppercase;
+    margin: 0;
+    overflow: hidden;
+
+    &:not(:first-child) {
+      margin-top: 20px;
+    }
+
+    & > span {
+      font-family: $bodyFont;
+      font-size: $baseFontSize - 1px;
+      font-style: italic;
+      font-weight: $bodyBold;
+      float: right;
+      line-height: 1;
+    }
+
+    &.is-total {
+      font-size: $baseFontSize;
+
+      & > span {
+        font-size: $baseFontSize + 1px;
+        line-height: 24px;
+      }
+    }
+  }
+
+  .total--discount {
+    display: none;
+
+    &.is-applied {
+      display: block;
+      margin-top: 20px;
+    }
+  }
+
+  .total--divider {
+    background-color: $mediumLightGray;
+    height: 1px;
+    margin: 20px 0;
+    width: 100%;
+  }
+}

@@ -1,0 +1,51 @@
+
+
+.printify--tabs {
+  $tab-border-color: $mediumLightGray;
+  $tab-border: 1px solid $tab-border-color;
+  $tab-content-background: $backgroundColor;
+  $tab-active-background: $tab-content-background;
+  $tab-inactive-color: $backgroundColor;
+  $tab-inactive-hover-color: darken($mediumGray, 5);
+
+  @include clearfix;
+  padding: 0;
+  margin: 0;
+
+  .printify--tab {
+    display: inline;
+  }
+
+  .tab--link {
+    display: inline-block;
+    font-family: $headingFont;
+    font-size: $baseFontSize - 3px;
+    font-weight: $headingBook;
+    padding: 7px 14px;
+    text-transform: uppercase;
+
+
+    &:hover {
+      // color: $base-link-color;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &.is-active {
+      border-bottom: 0;
+      border: $tab-border;
+      border-bottom-color: $tab-active-background;
+      margin-bottom: -1px;
+    }
+  }
+
+  .tab--content {
+    display: none;
+    padding: 10px 0;
+    border-top: $tab-border;
+    float: left;
+    width: 100%;
+  }
+}

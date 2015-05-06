@@ -1,0 +1,43 @@
+.marketplace--content {
+
+  .marketplace--hero {
+    @extend .printify--small-hero;
+  }
+
+  .marketplace--body {
+    // @extend .wrapper;
+    padding: 40px;
+  }
+
+  .marketplace--products {
+    @extend .printify--row;
+  }
+
+  .marketplace--product {
+    @extend .printify--column;
+    @extend .printify--column.one-third;
+
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+
+    &:nth-child(n + 4) {
+      margin-top: 40px;
+    }
+  }
+
+    .product--link {
+      display: block;
+
+      &:hover {
+
+      }
+    }
+
+    .product--thumb {
+      display: block;
+      margin: auto;
+      max-width: 100%;
+    }
+  
+}

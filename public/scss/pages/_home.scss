@@ -1,0 +1,57 @@
+.home--content {
+
+  .home--hero {
+    @extend .printify--hero;
+    background: url('../images/home-hero.jpg') no-repeat;
+    background-size: cover;
+  }
+
+  .section--heading {
+    text-align: center;
+  }
+
+  .section--subheading {
+    text-align: center;
+  }
+
+  .marketplace--preview {
+    @extend .printify--section;
+    @extend .wrapper;
+    padding-top: 0;
+  }
+
+  .products--preview {
+    .section--row {
+      margin-top: 20px;
+    }
+  }
+
+  .marketplace--products {
+    @extend .wrapper;
+    margin-top: 20px;
+  }
+
+  .marketplace--product {
+    @extend .printify--column;
+    @extend .printify--column.one-third;
+
+    .product--link {
+      display: block;
+    }
+
+    .product--thumb {
+      display: block;
+      width: 100%;
+    }
+  }
+
+  .home--action {
+    @extend .printify--btn;
+    @extend .printify--btn.btn--medium;
+    @extend .printify--btn.btn--primary--outline;
+    display: block;
+    margin: 20px auto 0 auto;
+    width: 300px;
+  }
+
+}

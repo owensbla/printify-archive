@@ -1,0 +1,64 @@
+<div class="product--content">
+    <section class="product--hero">
+        <h1 class="hero--subheading">{{marketplaceProduct.title}}</h1>
+        {{!-- <h2 class="hero--subheading">{{marketplaceProduct.title}}</h2> --}}
+    </section>
+
+    <section class="product--overview">
+        <div class="overview--row">
+            <div class="product--preview">
+                <img src="{{marketplaceProduct.fullImageUrl}}" alt="Print Preview" class="product--image">
+            </div>
+            <div class="product--details">
+
+                <ul class="printify--tabs js-tabs">
+
+                    <li class="printify--tab">
+                      <a href="javascript:void(0)" class="tab--link is-active">Description</a>
+                      <div class="tab--content">
+                        <p>Museum-quality posters that are perfect for any size room.</p>
+                        <ul>
+                            <li>heavyweight Epson Enhanced Matte Paper (10.3mil thick)</li>
+                            <li>printed on an Epson Stylus Pro 7900</li>
+                            <li>uses Epson UltraChrome HDR ink-jet technology.</li>
+                            <li>optional lightweight, shatter resistant frames with acrylite front protector</li>
+                        </ul>
+                      </div>
+                    </li>
+
+                  {{!-- <li class="printify--tab">
+                    <a href="javascript:void(0)" class="tab--link is-active">Description</a>
+                    <div class="tab--content">
+                        {{{marketplaceProduct.description}}}
+                    </div>
+                  </li> --}}
+
+                </ul>
+
+                {{~#if framedPosters ~}}
+                <h6 class="product--section-heading">Framed Poster Sizes &amp; Pricing</h6>
+                <ul class="product--sizes">
+                    {{# each marketplaceProduct.framedPosters}}
+                    <li class="product--size js-select-size" data-id="{{id}}" data-product="{{product.id}}">{{ product.formattedSize }} – {{ product.formattedPrice }}</li>
+                    {{/each}}
+                </ul>
+                {{~/if~}}
+
+                {{~#if posters ~}}
+                <h6 class="product--section-heading">Poster Sizes &amp; Pricing</h6>
+                <ul class="product--sizes">
+                    {{# each marketplaceProduct.posters}}
+                    <li class="product--size js-select-size" data-id="{{id}}" data-product="{{product.id}}">{{ product.formattedSize }} – {{ product.formattedPrice }}</li>
+                    {{/each}}
+                </ul>
+                {{/if}}
+
+                <div>
+                    <button class="js-add-to-cart product--cta">Add to Cart</button>
+                </div>
+            </div>  
+        </div>
+    </section>
+
+</div>
+

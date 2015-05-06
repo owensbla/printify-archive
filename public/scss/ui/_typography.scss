@@ -1,0 +1,41 @@
+body {
+  color: $bodyTextColor;
+  font-family: $bodyFont;
+  font-size: $baseFontSize;
+  font-weight: $bodyBook;
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $headingFont;
+}
+
+h1 {
+  color: $headingColor;
+  font-weight: $headingBold;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: $headingBook;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+em {
+  font-style: italic;
+}
+
+.printify--body-heading {
+  font-size: $baseFontSize + 2px;
+  margin-top: 0;
+}

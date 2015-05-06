@@ -1,0 +1,153 @@
+.product--overview {
+  
+  .overview--row {
+    @extend .printify--row;
+  }
+
+  .product--preview {
+    @extend .printify--column;
+    @extend .printify--column.two-fifths;
+  }
+
+  .product--image {
+    display: block;
+    max-width: 100%;
+  }
+
+  .product--details {
+    @extend .printify--column;
+    @extend .printify--column.three-fifths;
+  }
+
+  .product--description {
+    margin: 0;
+  }
+
+  .product--variations-table {
+    margin-top: 20px;
+  }
+
+  .product--cta {
+    @extend .printify--btn;
+    @extend .printify--btn.btn--medium;
+    @extend .printify--btn.btn--secondary;
+    float: right;
+    margin-top: 20px;
+  }
+
+  .product--sizes {
+    display: inline-block;
+    list-style-type: none;
+    margin: 0 0 0 0;
+    overflow: hidden;
+    padding: 0;
+  }
+
+  .product--size {
+    border: 1px solid $mediumGray;
+    cursor: pointer;
+    display: inline-block;
+    float: left;
+    margin-top: 20px;
+    padding: 5px 10px;
+
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+
+    &:hover {
+      border-color: $primaryColor;
+      color: $primaryColor;
+      font-weight: $bodyBold;
+    }
+
+    &.is-selected {
+      background-color: $primaryColor;
+      border-color: $primaryColor;
+      color: $offWhite;
+      font-weight: $bodyBold;
+    }
+  }
+
+  .printify--tabs {
+    border-bottom: 1px solid $mediumLightGray;
+  }
+
+  .section--subheading {
+    @extend .printify--body-heading;
+  }
+
+  .product--template-link {
+    display: block;
+    margin-top: 20px;
+    text-align: center;
+  }
+
+}
+
+.product--section-heading {
+  font-size: $baseFontSize;
+  margin: 20px 0 0 0;
+}
+
+.product--variations-table {
+  width: 100%;
+  
+  thead {
+    background-color: $shadowColor;
+    border: 1px solid tint($shadowColor, 30%);
+    padding: 0 10px;
+  }
+
+  th {
+    color: $offWhite;
+    font-style: italic;
+    font-weight: $bodyBook;
+    padding: 5px 20px;
+    text-align: left;
+
+    &.variations--price {
+      text-align: right;
+    }
+  }
+
+  .variations--action,
+  .variation--action {
+    padding: 0 10px;
+    text-align: center;
+    width: 60px;
+  }
+
+  .variation {
+    background-color: $white;
+    cursor: pointer;
+
+    td {
+      border: 1px solid $lightGray;
+      font-size: $baseFontSize - 2px;
+      padding: 5px 20px;
+      text-align: left;
+
+      &.variation--price {
+          text-align: right;
+        }
+    }
+
+    &:hover,
+    &.is-selected {
+      background-color: #e3e3e3;
+    }
+
+    &.is-selected > .variation--action:before {
+      @include icon("check");
+      display: block;
+      font-size: $baseFontSize + 2px;
+      text-align: center;
+    }
+  }
+
+  .variations {
+    padding: 5px 0;
+  }
+
+}

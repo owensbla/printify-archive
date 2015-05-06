@@ -1,0 +1,90 @@
+.order-detail--content {
+  .order-detail--hero {
+    @extend .printify--small-hero;
+  }
+
+    .hero--order-detail {
+      &:not(:last-child) {
+        margin-right: 30px;
+      }
+    }
+
+  .order-detail--overview {
+    @extend .wrapper;
+    padding: 40px 20px;
+  }
+
+  .order-detail--overview {
+    @extend .wrapper;
+    padding: 40px 20px;
+  }
+
+    .overview--row {
+      @extend .printify--row;
+    }
+
+    .overview--column {
+      @extend .printify--column;
+    }
+
+  .order--address {
+    
+  }
+
+    .address--field {
+      margin: 0;
+    }
+
+  .order-detail--section {
+    &:not(:first-child) {
+      margin-top: 40px;
+    }
+  }
+
+    .section--heading {
+      @extend .printify--body-heading;
+    }
+
+  .order-detail--prints {
+    @extend .printify--row;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .order-detail--print {
+    @extend .printify--column;
+    @extend .printify--column.one-third;
+
+    &:nth-child(n + 4) {
+      margin-top: 20px;
+    }
+
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+  }
+
+    .print--name {
+      margin: 0 0 10px 0;
+      text-align: center;
+    }
+
+    .print--thumb {
+      display: block;
+      margin: auto;
+      max-height: 150px;
+      max-width: 300px;
+    }
+
+    .print--price {
+      font-size: $baseFontSize - 3px;
+      margin: 0;
+    }
+
+    .print--shipping-status {
+      font-size: $baseFontSize - 2px;
+      margin: 10px 0 0 0;
+      text-align: center;
+    }
+}

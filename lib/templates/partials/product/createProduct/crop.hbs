@@ -1,0 +1,17 @@
+<p class="create--subheading printify--message message--info">
+    Crop the picture below to fit your print size (if necessary).
+    {{~#if isCanvas ~}}
+    <br>
+    NOTE: Make sure you <a href="https://s3-us-west-2.amazonaws.com/printify.io/assets/printify-canvas-templates.zip" target="_blank">
+        download the template</a> to account for the back and sides of canvas prints.
+    {{~/if~}}
+</p>
+
+
+<div class="create--preview">
+    <img src="{{ photo.fullUrl }}" class="preview--image js-jcrop is-loading">
+</div>
+
+<a href="javascript:void(0)" class="js-rotate-crop">Rotate Crop</a>
+
+<p class="create--next"><a href="javascript:void(0)" class="create--action js-crop">Save Cropping &amp; Continue</a></p>

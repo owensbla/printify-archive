@@ -1,0 +1,12 @@
+.product--content {
+    
+  .product--hero {
+    @extend .printify--small-hero;
+  }
+
+  .product--overview {
+    @extend .wrapper;
+    padding: 40px 0;
+  }
+
+}

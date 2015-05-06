@@ -1,0 +1,54 @@
+.order-history--content {
+  .order-history--hero {
+    @extend .printify--small-hero;
+  }
+
+  .order-history--overview {
+    @extend .wrapper;
+    padding: 40px 20px;
+  }
+
+  .order-history--order {
+    border: 1px solid $mediumLightGray;
+    margin: auto;
+    overflow: hidden;
+    padding: 20px;
+    width: 600px;
+
+    &:not(:first-child) {
+      margin-top: 40px;
+    }
+  }
+
+    .order--id {
+      margin: 0 0 20px 0;
+      overflow: hidden;
+    }
+
+    .order--created {
+      float: right;
+      font-family: $bodyFont;
+      font-size: $baseFontSize - 1px;
+      font-style: italic;
+      letter-spacing: normal;
+      text-transform: none;
+    }
+
+    .order--items {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+
+      .order--item {
+        &:not(:first-child) {
+          margin-top: 10px;
+        }
+      }
+
+    .order--total {
+      float: right;
+      margin: 10px 0 0 0;
+    }
+
+}

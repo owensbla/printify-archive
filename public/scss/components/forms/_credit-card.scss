@@ -1,0 +1,12 @@
+.cc-form--form {
+    @extend .printify--form;
+
+    .accepted-cards {
+        float: right;
+
+        & > img {
+            display: block;
+            height: 18px;
+        }
+    }
+}

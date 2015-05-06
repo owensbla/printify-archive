@@ -1,0 +1,130 @@
+.printify--hero {
+  height: 300px;
+  padding: 100px 0 0 0;
+  position: relative;
+  min-width: $minWidth;
+
+  .hero--screen {
+    background-color: rgba($shadowColor, 0.4);
+    left: 0;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 0;
+  }
+
+  .hero--content {
+    @extend .wrapper;
+    text-align: center;
+  }
+
+  .hero--heading {
+    color: $highlightColor;
+    font-size: 56px;
+    line-height: 1.2;
+    margin: 0;
+    position: relative;
+    text-align: center;
+    text-shadow: 0 0 10px $shadowColor;
+    text-transform: uppercase;
+  }
+
+  .hero--subheading {
+    color: shade($offWhite, 5%);
+    font-size: 20px;
+    font-family: $bodyFont;
+    font-style: italic;
+    font-weight: $bodyBook;
+    letter-spacing: 0;
+    margin: 20px 0;
+    position: relative;
+    text-align: center;
+    text-shadow: 0 0 5px $shadowColor;
+    text-transform: none;
+  }
+
+  .hero--action {
+    @extend .printify--btn;
+    @extend .printify--btn.btn--big;
+    @extend .printify--btn.btn--light--outline;
+    margin-top: 80px;
+    position: relative;
+  }
+}
+
+.printify--small-hero {
+  background-color: $shadowColor;
+  padding: 40px;
+  
+  .hero--heading {
+    color: $offWhite;
+    margin: 0;
+    text-align: center;
+  }
+
+  .hero--subheading {
+    color: shade($offWhite, 20%);
+    font-family: $bodyFont;
+    font-size: $baseFontSize;
+    font-style: italic;
+    margin: 0;
+    text-align: center;
+    text-transform: none;
+  }
+}
+
+.printify--step-hero {
+  background-color: $shadowColor;
+  padding: 20px;
+  text-align: center;
+
+  .hero--heading {
+    color: $offWhite;
+    margin: 0 0 20px 0;
+  }
+
+  .hero--steps {
+    display: inline-block;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .hero--step {
+    // border: 1px solid $mediumLightGray;
+    color: $mediumLightGray;
+    float: left;
+    font-family: $headingFont;
+    font-size: $baseFontSize - 4px;
+    font-weight: $headingBook;
+    padding: 6px 20px;
+    position: relative;
+    text-transform: uppercase;
+
+    &:not(:last-child) {
+      margin-right: 100px;
+
+      &:after {
+        @include icon("arrow-right");
+        color: tint($shadowColor, 20%);
+        font-size: 40px;
+        top: -7px;
+        right: -75px;
+        position: absolute;
+      }
+    }
+
+    &.is-complete {
+      border-color: $gray;
+      color: $gray;
+      text-decoration: line-through;
+    }
+
+    &.is-active {
+      border-color: $white;
+      color: $offWhite;
+      font-weight: $headingBold;
+    }
+  }
+}

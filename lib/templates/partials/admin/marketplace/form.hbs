@@ -1,0 +1,43 @@
+<form action="/a/marketplace/new" method="post" class="admin__mp-form--form" enctype="multipart/form-data">
+    <div class="form--section">
+        <h2 class="printify--body-heading">Marketplace Product</h2>
+        <div class="form--field">
+            <input type="text" placeholder="Title" class="field--input" value="{{product.title}}" name="title"> 
+        </div>
+        <div class="form--field">
+            <select name="model" class="field--select">
+                <option value="-1" disabled selected>Select a Model</option>
+                <option value="Poster">Poster</option>
+                <option value="Framed Poster">Framed Poster</option>
+                <option value="Canvas">Canvas</option>
+            </select>
+        </div>
+        <div class="form--field">
+            <textarea placeholder="Description" class="field--input" value="{{product.description}}" name="description"></textarea>
+        </div>
+        <div class="form--field">
+            <input type="file" name="image" class="upload--input">
+        </div>
+    </div>
+    <div class="form--section">
+        <h2 class="printify--body-heading">Variations</h2>
+        <div class="js-variations">
+            <div class="js-variation">
+                <div class="form--field">
+                    <select name="variationProduct[]" class="field--select">
+                        <option value="-1" disabled selected>Select a Product</option>
+                        {{#each products}}
+                        <option value="{{id}}">{{name}}</option>
+                        {{/each}}
+                    </select>
+                </div>
+                <div class="form--field">
+                    <input type="file" name="variationImage[]" class="upload--input">
+                </div>
+            </div>
+        </div>
+        <button class="admin__mp-form--add-variation js-add-variation">Add Variation</button>
+    </div>
+    <div class="form--message js-message {{messageClass}}">{{message}}</div>
+    <button class="admin__mp-form--submit">Create Marketplace Product</button>
+</form>

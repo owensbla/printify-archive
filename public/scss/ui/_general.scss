@@ -1,0 +1,128 @@
+$footerHeight: 260px;
+
+// General
+html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+html, body { height: 100%; position: relativ; }
+
+.content-wrap { min-height: 100%; }
+
+.content {
+    overflow:auto;
+    padding-bottom: $footerHeight;
+}  /* must be same height as the footer */
+
+.footer {
+    position: relative;
+    margin-top: -$footerHeight; /* negative value of footer height */
+    height: $footerHeight;
+    clear:both;
+} 
+
+/*Opera Fix*/
+body:before {
+    content:"";
+    height:100%;
+    float:left;
+    width:0;
+    margin-top:-32767px;
+}
+
+body {
+    background-color: $backgroundColor;
+    min-height: 100%;
+    min-width: $minWidth;
+    margin: 0;
+    overflow-x: hidden;
+    padding: 0 0 0 0;
+
+    &.is-loading {
+        overflow: hidden;
+
+        &.initializing {
+            &:before {
+                background-color: rgb(255, 255, 255);
+            }
+        }
+
+        &:after {
+            color: $primaryColor;
+            content: 'Printify.io';
+            font-family: $headingFont;
+            font-size: 32px;
+            font-weight: $headingBook;
+            height: 100%;
+            line-height: 1;
+            position: fixed;
+            text-align: center;
+            text-transform: uppercase;
+            top: 100px;
+            width: 100%;
+            z-index: $zIndexLoading + 1;
+        }
+
+        &.fading-out {
+            &:before,
+            &:after {
+                @include opacity(0);
+                @include transition(opacity 1s linear);
+            }
+        }
+
+        &:before {
+            background: rgba(255, 255, 255, 0.9) url("../images/loading.gif") no-repeat center 150px;
+            content: '';
+            display: block;
+            height: 100%;
+            margin-top: 0;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: $zIndexLoading;
+        }
+    }
+}
+
+a,
+a:visited {
+    @include transition(color 0.2s linear);
+    color: $linkColor;
+    text-decoration: none;
+
+    &:hover {
+        @include transition(color 0.2s linear);
+        color: $linkHoverColor;
+    }
+
+    &:active,
+    &.active,
+    &.is-active {
+        color: $linkHoverColor;
+    }
+}
+
+blockquote {
+    border-left: 10px solid lighten($primaryColor, 30%);
+    margin: 30px 0;
+    padding: 0 30px;
+
+    & > p {
+        font-size: 20px !important;
+        font-style: italic !important;
+        font-weight: 100 !important;
+    }
+}
+
+hr {
+    border: 0;
+    background: #dddddd;
+    border-color: #dddddd;
+    color: #dddddd;
+    height: 1px;
+    margin: 40px auto;
+    width: 40%;
+}

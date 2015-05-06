@@ -1,0 +1,31 @@
+.printify--message {
+  border: 1px solid;
+  font-family: $headingFont;
+  font-size: $baseFontSize - 2px;
+  padding: 20px;
+
+  &.message--error {
+    background-color: tint($errorColor, 80%);
+    border-color: tint($errorColor, 60%);
+    color: $errorColor;
+  }
+
+  &.message--success {
+    background-color: tint($successColor, 80%);
+    border-color: tint($successColor, 60%);
+    color: $successColor;
+  }
+
+  &.message--alert {
+    background-color: tint($alertColor, 80%);
+    border-color: tint($alertColor, 60%);
+    color: $alertColor;
+  }
+
+  &.message--info {
+    background-color: tint($infoColor, 80%);
+    border-color: tint($infoColor, 60%);
+    color: $infoColor;
+  }
+
+}

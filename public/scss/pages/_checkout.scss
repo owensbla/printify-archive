@@ -1,0 +1,194 @@
+.checkout--content {
+  .checkout--hero {
+    @extend .printify--step-hero;
+
+    .hero--heading {
+      line-height: 1;
+      margin: 0;
+    }
+  }
+
+  .checkout--overview {
+    @extend .wrapper;
+    padding: 40px 20px;
+  }
+
+    .overview--row {
+      @extend .printify--row;
+    }
+
+    .overview--column {
+      @extend .printify--column;
+    }
+
+    .overview--body {
+      @extend .printify--column;
+      @include span-columns(8 of 12);
+    }
+
+    .overview--action {
+      @extend .printify--btn;
+      @extend .printify--btn.btn--medium;
+      @extend .printify--btn.btn--primary--outline;
+      margin-top: 20px;
+    }
+
+  .checkout--section {
+    &:not(:first-child) {
+      margin-top: 40px;
+    }
+  }
+
+    .section--heading {
+      @extend .printify--body-heading;
+
+      .icon-lock {
+        color: $successColor;
+        float: right;
+        position: relative;
+        top: 1px;
+      }
+    }
+
+    .section--note {
+      color: $mediumGray;
+      font-family: $headingFont;
+      font-size: $baseFontSize - 3px;
+      font-style: italic;
+      margin: -10px 0 15px 0;
+    }
+
+  .overview--aside {
+    @extend .printify--column;
+    @include span-columns(3 of 12);
+    float: right;
+  }
+
+  .overview--totals {
+    border: 1px solid $mediumLightGray;
+    padding: 20px;
+  }
+
+  .checkout--divider {
+    background-color: $mediumLightGray;
+    height: 1px;
+    margin: 20px 0;
+    width: 100%;
+  }
+
+  .checkout--totals {
+    @extend .printify--totals;
+  }
+
+  .checkout--checkout {
+    @extend .printify--btn;
+    @extend .printify--btn.btn--medium;
+    @extend .printify--btn.btn--secondary;
+    width: 100%;
+  }
+
+  .promo-form--form {
+    margin-top: 20px;
+  }
+
+  .shipping--addresses {
+    @extend .printify--form;
+    margin-bottom: 20px;
+  }
+
+  .shipping--methods {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .shipping--method {
+    border: 1px solid $mediumLightGray;
+    cursor: pointer;
+    font-family: $headingFont;
+    font-size: $baseFontSize - 4px;
+    padding: 10px;
+    text-transform: uppercase;
+
+    &:hover {
+      border-color: $primaryColor;
+    }
+
+    &.is-selected {
+      background-color: $primaryColor;
+      border-color: $primaryColor;
+      color: $offWhite;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+
+    .method--price {
+      display: inline-block;
+      font-weight: $headingBold;
+      width: 70px;
+    }
+
+  .shipping--note {
+    font-size: $baseFontSize - 2px;
+    font-style: italic;
+  }
+
+  .checkout--prints {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  .checkout--print {
+    float: left;
+    height: 200px;
+    width: 30%;
+
+    &:not(:nth-child(3n)) {
+      margin-right: 5%;
+    }
+  }
+
+    .print--thumb {
+      display: block;
+      max-height: 150px;
+      max-width: 150px;
+    }
+
+    .print--name {
+      margin: 0 0 5px 0;
+    }
+
+    .print--price {
+      margin: 5px 0 0 0;
+    }
+
+  .order--cc {
+    margin-top: 10px;
+  }
+
+    .cc--field {
+      margin: 0;
+    }
+
+  .order--address {
+    
+  }
+
+    .address--field {
+      margin: 0;
+    }
+
+  .checkout--primary-action {
+    @extend .printify--btn;
+    @extend .printify--btn.btn--big;
+    @extend .printify--btn.btn--secondary;
+    margin-top: 20px;
+    width: 100%;
+  }
+
+}

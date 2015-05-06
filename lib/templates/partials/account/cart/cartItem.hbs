@@ -1,0 +1,8 @@
+<div class="cart--print">
+    <div class="print--wrapper">
+        <h5 class="print--name">{{ product.formattedModel }}, {{ product.size }}</h5>
+        <p class="print--price">{{ product.formattedPrice }}</p>
+        <a href="javascript:void(0)" class="print--action js-remove" data-id="{{ id }}">Remove from Cart</a>
+    </div>
+    <img src="{{ photo.fullThumbnailUrl }}" alt="{{ product.formattedModel }} Upload Thumbnail" class="print--thumb">
+</div>

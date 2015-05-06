@@ -1,0 +1,65 @@
+<div class="product--content">
+    <section class="product--hero">
+        <h1 class="hero--heading">Canvas Prints</h1>
+        <h2 class="hero--subheading">Hand-stretched. Solid wood. Matte-finish coating. Fade-resistant.</h2>
+    </section>
+
+    <section class="product--overview">
+        <div class="overview--row">
+            <div class="product--preview">
+                <img src="{{defaultProduct.image}}" alt="Canvas print preview" class="product--image">
+            </div>
+            <div class="product--details">
+
+                <ul class="printify--tabs js-tabs">
+
+                  <li class="printify--tab">
+                    <a href="javascript:void(0)" class="tab--link is-active">Description</a>
+                    <div class="tab--content">
+                        <p>Beautifully hand stretched, high quality prints perfect for adding personality to any room.</p>
+                        <ul>
+                            <li>20.5mil thick, fade resistant, poly-cotton blend canvas</li>
+                            <li>hand stretched and hand glued</li>
+                            <li>1.5" solid wood frame with a matte-finish coating</li>
+                        </ul>
+                    </div>
+                  </li>
+
+                  <li class="printify--tab">
+                    <a href="javascript:void(0)" class="tab--link">Guides &amp; Templates</a>
+                    <div class="tab--content">
+                        <h2 class="section--subheading">Guidelines</h2>
+                        <ul class="product--guidelines">
+                            <li class="product--guideline">High quality PNG's are best (150dpi or more).</li>
+                            <li class="product--guideline">Canvas prints have a 3" fold on each side. You must account for this when creating crops or graphics.</li>
+                            {{!-- <li class="product--guideline">All fonts should be converted to outlines to ensure fonts are displayed correctly.</li> --}}
+                            <li class="product--guideline">Avoid making graphics with straight borders. Borders may come up uneven after the cutting process.</li>
+                        </ul>
+                        <div class="printify--message message--info">
+                            All uploads should follow the guidelines above.
+                            Pictures that do not follow the guidelines may not be printed correctly.
+                        </div>
+                        <a href="https://s3-us-west-2.amazonaws.com/printify.io/assets/printify-canvas-templates.zip" target="_blank" class="product--template-link">
+                            Still not sure? Download the templates!
+                        </a>
+                    </div>
+                  </li>
+                  
+                </ul>
+
+                <h6 class="product--section-heading">Sizes &amp; Pricing</h6>
+                <ul class="product--sizes">
+                    {{# each products}}
+                    <li class="product--size js-select-size" data-id="{{id}}">{{ formattedSize }} – {{ formattedPrice }}</li>
+                    {{/each}}
+                </ul>
+                
+                <div>
+                    <button class="js-create-print product--cta">Create Your Print</button>
+                </div>
+            </div>  
+        </div>
+    </section>
+
+</div>
+

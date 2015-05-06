@@ -1,0 +1,25 @@
+<div class="checkout--section">
+    <h1 class="section--heading">Shipping Address</h1>
+    {{#if shippingAddresses}}
+    <form class="shipping--addresses">
+        <label class="field--label">Saved Addresses</label>
+        <div class="field--select">
+            <select class="select--select js-saved-addresses" data-address-type="shipping">
+                {{#each shippingAddresses}}
+                <option value="{{id}}">{{formattedAddress}}</option>
+                {{/each}}
+                <option value="new">New Address</option>
+            </select>
+        </div>
+    </form>
+    {{/if}}
+    <div class="js-form">
+        {{> forms/addressForm }}
+    </div>
+    <button class="js-calculate-shipping overview--action">Calculate Shipping</button>
+</div>
+<div class="checkout--section">
+    <h1 class="section--heading">Shipping Method</h1>
+    <div class="js-shipping"></div>
+    <div class="js-shipping-message printify--message message--info">A shipping method can be selected after entering a shipping address above.</div>
+</div>

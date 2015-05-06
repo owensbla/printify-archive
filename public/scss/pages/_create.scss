@@ -1,0 +1,72 @@
+.create--content {
+
+  .create--upload-perc {
+    color: $secondaryColor;
+    font-family: $headingFont;
+    font-size: 48px;
+    line-height: 1;
+    position: relative;
+
+    &:not(:empty) {
+      margin-bottom: 40px;
+      top: 40px;
+    }
+  }
+
+  .create--wrapper {
+    @extend .wrapper;
+    margin-top: 40px;
+    padding-bottom: 40px;
+    text-align: center;
+  }
+
+  .create--subheading {
+    font-size: $baseFontSize + 2px;
+    font-style: italic;
+    margin: 0;
+    text-align: center;
+  }
+
+  .create--upload {
+    @extend .printify--upload;
+    margin-top: 40px;
+  }
+
+  .create--preview {
+    margin: 20px auto;
+    position: relative;
+    width: 700px;
+
+    .preview--image {
+      display: block;
+      width: 100%;
+    }
+  }
+
+  .create--crop {
+    margin: 20px auto;
+    position: relative;
+    max-width: 300px;
+
+    .crop--image {
+      display: block;
+      margin: auto;
+    }
+  }
+
+  .create--next {
+    margin: 20px 0 0 0;
+    text-align: center;
+  }
+
+  .create--action {
+    @extend .printify--btn;
+    @extend .printify--btn.btn--medium;
+    @extend .printify--btn.btn--primary--outline;
+  }
+
+  .create--hero {
+    @extend .printify--step-hero;
+  }
+
+}

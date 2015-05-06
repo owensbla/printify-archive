@@ -1,0 +1,27 @@
+<div class="cart--content">
+    <section class="cart--hero">
+        <h1 class="hero--heading">Cart</h1>
+    </section>
+
+    <section class="cart--overview" data-step="1">
+        <div class="overview--row">
+            <div class="overview--body">
+                {{~#if cartItems ~}}
+                {{#each cartItems}}{{> account/cart/cartItem }}{{/each}}
+                {{~^~}}
+                <div class="printify--message message--info">Your cart is empty.</div>
+                {{~/if~}}
+            </div>
+            <div class="overview--aside">
+                <div class="printify--totals">
+                    <p class="printify--total">
+                        Subtotal: <span class="js-cart-total" data-field="subtotal">{{ formattedSubtotal }}</span>
+                    </p>
+                    <div class="total--divider"></div>
+                </div>
+                <button class="cart--checkout js-go-checkout">Checkout</button>
+            </div>
+        </div>
+    </section>
+
+</div>

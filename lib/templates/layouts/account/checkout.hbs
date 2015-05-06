@@ -1,0 +1,44 @@
+<div class="checkout--content">
+    <section class="checkout--hero">
+        <ul class="hero--steps">
+            <li class="hero--step is-active" data-step="1">Shipping</li>
+            <li class="hero--step" data-step="2">Billing</li>
+            <li class="hero--step" data-step="3">Confirm</li>
+        </ul>
+    </section>
+
+    <section class="checkout--overview" data-step="1">
+        <div class="overview--row">
+            <div class="overview--body js-body">
+                {{> account/checkout/shipping }}
+            </div>
+            <div class="overview--aside">
+                <h1 class="section--heading">Cart Totals</h1>
+                <div class="overview--totals">
+                    <div class="printify--totals">
+                        <p class="printify--total">
+                            Subtotal: <span class="js-checkout-total" data-field="subtotal">{{ formattedSubtotal }}</span>
+                        </p>
+                        <div class="js-discount total--discount">
+                            <p class="printify--total">
+                                Discount: <span class="js-checkout-total" data-field="discount">$0.00</span>
+                            </p>
+                        </div>
+                        <p class="printify--total">
+                            Shipping: <span class="js-checkout-total" data-field="shipping">--</span>
+                        </p>
+                        <p class="printify--total">
+                            Taxes: <span class="js-checkout-total" data-field="tax">--</span>
+                        </p>
+                        <div class="total--divider"></div>
+                        <p class="printify--total is-total">
+                            Total: <span class="js-checkout-total" data-field="total">--</span>
+                        </p>
+                    </div>
+                    <div class="checkout--divider"></div>
+                    {{> forms/promoCodeForm }}
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

@@ -1,0 +1,23 @@
+.login-modal {
+  @include modal(350px);
+
+  .login-modal--heading {
+    color: $primaryColor;
+    font-size: $baseFontSize + 8px;
+    margin: 0;
+    text-align: center;
+  }
+
+  .login-modal--form {
+    margin-top: 20px;
+    width: 100%;
+  }
+
+  .login-modal--note {
+    color: $mediumLightGray;
+    font-size: $baseFontSize - 3px;
+    font-style: italic;
+    margin: 0;
+    text-align: center;
+  }
+}

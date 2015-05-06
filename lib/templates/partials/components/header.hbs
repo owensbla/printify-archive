@@ -1,0 +1,26 @@
+{{!-- <div class="banner banner--info">
+    <div class="banner--wrapper">
+        Sorry, the cutoff for holiday shipping has ended and we can no longer guarantee delivery by Christmas.
+    </div>
+</div> --}}
+<header data-component="topbar" class="topbar">
+    <div class="topbar--container">
+        <h1 class="topbar--logo">
+            <a href="/" class="js-go-home logo--link">Printify.io</a>
+        </h1>
+
+        <ul class="topbar--nav">
+            {{!-- <li class="nav--link"><a href="/marketplace" class="js-go-marketplace">Marketplace</a></li> --}}
+            <li class="nav--link"><a href="/products" class="js-go-products">Custom Prints</a></li>
+            {{!-- <li class="nav--link"><a href="/contact" class="js-go-contact">Contact</a></li> --}}
+        </ul>
+
+        <div class="topbar--session">
+        {{#if user}}
+            {{> components/topbar/signedIn }}
+        {{else}}
+            {{> components/topbar/signedOut }}
+        {{/if}}
+        </div>
+    </div>
+</header>

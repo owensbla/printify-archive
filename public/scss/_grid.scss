@@ -1,0 +1,76 @@
+@import "bourbon";
+
+// Basic Settings
+$border-box-sizing: true;
+
+// $visual-grid: true;
+$column: 60px;
+$gutter: 20px;
+$max-width: $gridWidth;
+
+// override settings before importing neat
+@import "neat";
+
+// Define your breakpoints
+$desktop: new-breakpoint(min-width 769px);
+$tablet: new-breakpoint(max-width 768px);
+$mobile: new-breakpoint(max-width 480px);
+
+.printify--row {
+    @include row();
+}
+
+.printify--column {
+    float: left;
+
+    &:last-child {
+        margin-right: 0;
+    }
+
+    &.one-fourth {
+        @include span-columns(3 of 12);
+    }
+
+    &.three-fourths {
+        @include span-columns(9 of 12);       
+    }
+
+    &.one-third {
+        @include span-columns(4 of 12);
+    }
+
+    &.two-thirds {
+        @include span-columns(8 of 12);
+    }
+
+    &.one-half,
+    &.two-fourths {
+        @include span-columns(6 of 12);
+    }
+
+    &.full {
+        @include span-columns(12 of 12);
+    }
+
+    &.one-fifth {
+        @include span-columns(2 of 10);
+    }
+
+    &.two-fifths {
+        @include span-columns(4 of 10);
+    }
+
+    &.three-fifths {
+        @include span-columns(6 of 10);
+    }
+
+    &.four-fifths {
+        @include span-columns(8 of 10);
+    }
+}
+
+@mixin outer-container {
+    margin: 0 auto;
+    padding: 0 20px;
+    width: $gridWidth + 40px;
+}

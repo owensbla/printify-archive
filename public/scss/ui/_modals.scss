@@ -1,0 +1,79 @@
+$modalBackdropColor: $shadowColor;
+$modalContentColor: $offWhite;
+$modalPadding: 25px 40px;
+$modalDefaultWidth: 300px;
+$modalDefaultHeight: 400px;
+
+@mixin modal($contentWidth: $modalDefaultWidth, $contentHeight: auto) {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: -100%;
+    width: 100%;
+
+    &.is-shown {
+        top: 0;
+
+        .modal--content {
+            box-shadow: 1px 1px 3px 0 black(0.2);
+            @include transform(scale(1));
+            @include opacity(1);
+            visibility: visible;
+        }
+
+        .modal--backdrop {
+            @include opacity(0.4);
+            visibility: visible;
+            
+        }
+    }
+
+    
+    .modal--content {
+        @include backface-visibility(hidden);
+        @include opacity(0);
+        @include transform(scale(0.7));
+        @include transform(translate(-50% -50%));
+        @include transition(all 0.3s);
+        background-color: $modalContentColor;
+        height: $contentHeight;
+        left: 50%;
+        margin: auto;
+        margin-left: -($contentWidth / 2);
+        padding: $modalPadding;
+        position: fixed;
+        // top: 50%;
+        width: $contentWidth;
+        visibility: hidden;
+        z-index: $zIndexModal + 1;
+
+        @include media($desktop) {
+            top: 40px;
+        }
+
+        @include media($tablet) {
+            top: 30px;
+        }
+
+        @include media($mobile) {
+            top: 20px;
+        }
+    }
+
+    .modal--backdrop {
+        @include opacity(0);
+        @include transition(all 0.3s);
+        background-color: $modalBackdropColor;
+        height: 100%;
+        left: 0;
+        position: fixed;
+        top: 0;
+        visibility: hidden;
+        width: 100%;
+        z-index: $zIndexModal;
+    }
+}
+
+.dinghy--modal {
+    @include modal();
+}

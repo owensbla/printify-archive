@@ -1,0 +1,60 @@
+<form action="javascript:void(0)" class="cc-form--form js-cc-form">
+    <div class="form--row">
+        <div class="form--column three-fourths form--field">
+            <label for="cardNumber" class="field--label">
+                Card Number 
+                <span class="accepted-cards">
+                    <img src="/images/accepted-cards.png" alt="Accepted Credit Cards">
+                </span>
+            </label>
+            <input type="text" id="cardNumber" class="field--input js-field" data-field="cardNumber"> 
+            <div class="field--message js-field-message" data-field="cardNumber"></div>
+        </div>
+        <div class="form--column one-fourth form--field">
+            <label for="cvv" class="field--label">CVV</label>
+            <input type="text" id="cvv" class="field--input js-field" data-field="cvv"> 
+            <div class="field--message js-field-message" data-field="cvv"></div>
+        </div>
+    </div>
+    <div class="form--row">
+        <div class="form--column one-half form--field">
+            <label class="field--label">Expiration Month</label>
+            <div class="field--select">
+                <select class="select--select js-field" data-field="expirationMonth">
+                    <option value="01">January (01)</option>
+                    <option value="02">February (02)</option>
+                    <option value="03">March (03)</option>
+                    <option value="04">April (04)</option>
+                    <option value="05">May (05)</option>
+                    <option value="06">June (06)</option>
+                    <option value="07">July (07)</option>
+                    <option value="08">August (08)</option>
+                    <option value="09">September (09)</option>
+                    <option value="10">October (10)</option>
+                    <option value="11">November (11)</option>
+                    <option value="12">December (12)</option>
+                </select>
+            </div>
+            <div class="field--message js-field-message" data-field="expirationMonth"></div>
+        </div>
+        <div class="form--column one-half form--field">
+            <label class="field--label">Expiration Year</label>
+            <div class="field--select">
+                <select class="select--select js-field" data-field="expirationYear">
+                    <option value="2015">2015</option>
+                    <option value="2016">2016</option>
+                    <option value="2017">2017</option>
+                    <option value="2018">2018</option>
+                    <option value="2019">2019</option>
+                    <option value="2020">2020</option>
+                    <option value="2021">2021</option>
+                    <option value="2022">2022</option>
+                    <option value="2023">2023</option>
+                    <option value="2024">2024</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <input type="hidden" class="js-field" data-field="country" value="US">
+    <div class="form--message js-message"></div>
+</form>

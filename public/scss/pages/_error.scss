@@ -1,0 +1,17 @@
+.error--content {
+  .error--hero {
+    @extend .printify--small-hero;
+  }
+
+  .error--overview {
+    @extend .wrapper;
+    padding: 40px 20px;
+    text-align: center;
+
+    & > p {
+      font-size: 24px;
+      margin: auto;
+      width: 600px;
+    }
+  }
+}

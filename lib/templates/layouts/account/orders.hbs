@@ -1,0 +1,35 @@
+<div class="order-history--content">
+    <section class="order-history--hero">
+        <h1 class="hero--heading">Order History</h1>
+    </section>
+
+    <section class="order-history--overview">
+        {{~#if orders ~}}
+        {{~#each orders ~}}
+        <div class="order-history--order">
+            <h4 class="order--id">
+                <a href="/account/orders/{{id}}" class="js-go-order" data-id="{{id}}">Order: {{id}}</a> ({{formattedStatus}})
+                <span class="order--created">Placed: {{formattedCreatedAt}}</span>
+            </h4>
+
+            <ul class="order--items">
+                {{~#each orderItems ~}}
+                <li class="order--item">
+                    {{size}} {{formattedModel}} –&nbsp;
+                    {{~#if shipment ~}}Shipped on {{shipment.formattedShipDate}} (<a href="{{shipment.trackingUrl}}" target="_blank">{{shipment.trackingNumber}}</a>)
+                    {{~^~}}
+                    Processing
+                    {{~/if~}}
+                </li>
+                {{~/each~}}
+            </ul>
+
+            <p class="order--total">Total: {{formattedTotal}}</p>
+        </div>
+        {{~/each~}}
+        {{~^~}}
+        <div class="printify--message message--info">You haven't placed any orders yet.</div>
+        {{~/if~}}
+    </section>
+
+</div>

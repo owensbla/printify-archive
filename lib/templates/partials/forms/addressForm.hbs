@@ -1,0 +1,51 @@
+<form action="javascript:void(0)" class="address-form--form js-address-form">
+    <div class="form--field">
+        <label class="field--label">Country</label>
+        <div class="field--select">
+            <select class="select--select js-field" data-field="country">
+                <option value="-1"> </option>
+                <option value="US">United States</option>
+                <option value="-1">--------------</option>
+                {{#each countries}}
+                <option value="{{code}}">{{name}}</option>
+                {{/each}}
+            </select>
+        </div>
+    </div>
+    <div class="form--field">
+        <input type="text" placeholder="First Name" class="field--input js-field" data-field="firstName"> 
+        <div class="field--message js-field-message" data-field="firstName"></div>
+    </div>
+    <div class="form--field">
+        <input type="text" placeholder="Last Name" class="field--input js-field" data-field="lastName"> 
+        <div class="field--message js-field-message" data-field="lastName"></div>
+    </div>
+    <div class="form--field">
+        <input type="text" placeholder="Street Address" class="field--input js-field" data-field="address1"> 
+        <div class="field--message js-field-message" data-field="address1"></div>
+    </div>
+    <div class="form--field">
+        <input type="text" placeholder="Street Addres 2" class="field--input js-field" data-field="address2"> 
+        <div class="field--message js-field-message" data-field="address2"></div>
+    </div>
+    <div class="form--row">
+        <div class="form--column one-half form--field">
+            <input type="text" placeholder="City" class="field--input js-field" data-field="city"> 
+            <div class="field--message js-field-message" data-field="city"></div>
+        </div>
+        <div class="form--column one-half form--field">
+            <input type="text" placeholder="Postal Code" class="field--input js-field" data-field="zipCode"> 
+            <div class="field--message js-field-message" data-field="zipCode"></div>
+        </div>
+    </div>
+    <div class="form--field">
+        <label class="field--label">State/Province</label>
+        <div class="field--select">
+            <select class="select--select js-field" data-field="state"></select>
+        </div>
+        <div class="field--message js-field-message" data-field="state"></div>
+    </div>
+    {{!-- <input type="hidden" class="js-field" data-field="country" value="US"> --}}
+    <div class="form--message js-message"></div>
+    {{!-- <button class="js-save address-form--submit">Save</button> --}}
+</form>

@@ -1,0 +1,35 @@
+$bannerHeight: 40px;
+
+.banner {
+  font-family: $headingFont;
+  font-size: $baseFontSize - 2px;
+  height: $bannerHeight;
+  padding: 0;
+  text-align: center;
+  width: 100%;
+
+  .banner--wrapper {
+    @extend .wrapper;
+    line-height: $bannerHeight;
+  }
+
+  &.banner--alert {
+    background-color: tint($alertColor, 80%);
+    color: $alertColor;
+  }
+
+  &.banner--info {
+    background-color: tint($infoColor, 80%);
+    color: $infoColor;
+  }
+
+  &.banner--error {
+    background-color: tint($errorColor, 80%);
+    color: $errorColor;
+  }
+
+  &.banner--success {
+    background-color: tint($successColor, 80%);
+    color: $successColor;
+  }
+}
